@@ -1,0 +1,27 @@
+# Keep the published package to exactly what the plugin needs at runtime.
+# Personal data (gens.json, knowledge/, load-trace.log) lives in $DSH_HOME and
+# is never inside this directory, but the patterns below guard against a stray
+# copy being published if someone develops with DSH_HOME pointed here.
+
+# Dev / CI
+.github/
+.gitignore
+.npmignore
+*.tgz
+
+# Docs beyond the README the plugin ships
+CHANGELOG.md
+CONTRIBUTING.md
+
+# Local runtime data
+gens.json
+knowledge/
+load-trace.log
+**/*.local.json
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

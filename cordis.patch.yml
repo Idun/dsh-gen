@@ -1,0 +1,7 @@
+# dsh-gen bundle patch: mounts this package's host half as one Cordis loader row.
+# The same row is the browser roster row — the package declares `dsh.client`, so
+# client-modules discovers `./lib/client.js` from this package's package.json and
+# serves it to the Web app.
+- insert:
+    - id: dsh-gen
+      name: dsh-gen
